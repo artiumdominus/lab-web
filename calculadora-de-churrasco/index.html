@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Churrasco</title>
+</head>
+<body>
+    <h1>CALCULADORA DE CHURRASCO</h1>
+    <h2>Quantas pessoas vão ao churrasco?</h2>
+    Homens: <input type="number" id="homens" value="0" min="0" onchange="calcular()"> |
+    Mulheres: <input type="number" id="mulheres" value="0" min="0" onchange="calcular()"> |
+    Crianças: <input type="number" id="crianças" value="0" min="0" onchange="calcular()"><br>
+    <h2>Que tipo de carne você quer servir?</h2>
+    <div>
+        <h3>Cortes Bovinos</h3>
+        <input type="checkbox" id="alcatra" name="Alcatra" onchange="calcular()">Alcatra<br>
+        <input type="checkbox" id="carne-de-sol" name="Carne de Sol" onchange="calcular()">Carne de Sol<br>
+        <input type="checkbox" id="contra-file" name="Contra Filé" onchange="calcular()">Contra Filé<br>
+        <input type="checkbox" id="fraldinha" name="Fraldinha" onchange="calcular()">Fraldinha<br>
+        <input type="checkbox" id="maminha" name="Maminha" onchange="calcular()">Maminha<br>
+        <input type="checkbox" id="picanha" name="Picanha" onchange="calcular()">Picanha<br>
+        <input type="checkbox" id="pernil-de-cordeiro" name="Pernil de Cordeiro" onchange="calcular()">Pernil de Cordeiro<br>
+        <h3>Linguiças</h3>
+        <input type="checkbox" id="linguica-de-frango" name="Linguiça de Frango" onchange="calcular()">Linguiça de Frango<br>
+        <input type="checkbox" id="linguica-toscana" name="Linguiça Toscana" onchange="calcular()">Linguiça Toscana<br>
+        <h3>Carnes de Frango</h3>
+        <input type="checkbox" id="coracao-de-frango" name="Coração de Frango" onchange="calcular()">Coração de Frango<br>
+        <input type="checkbox" id="sobrecoxa" name="Sobrecoxa" onchange="calcular()">Sobrecoxa<br>
+        <h3>Peixes</h3>
+        <input type="checkbox" id="peixe-meca" name="Peixe Meca" onchange="calcular()">Peixe Meca<br>
+    </div>
+    
+    <p id="resultado"></p>
+
+    <script src="calculadora-de-churrasco.js"></script>
+</body>
+</html>
