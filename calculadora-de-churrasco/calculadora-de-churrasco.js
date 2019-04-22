@@ -7,33 +7,15 @@ function calcular() {
     var q_tipos_de_carne = 0;
     var tipos_de_carne = [];
 
-    var alcatra = document.getElementById("alcatra");
-    considerar(alcatra);
-    var carneDeSol = document.getElementById("carne-de-sol");
-    considerar(carneDeSol);
-    var contraFile = document.getElementById("contra-file");
-    considerar(contraFile);
-    var fraldinha = document.getElementById("fraldinha");
-    considerar(fraldinha);
-    var maminha = document.getElementById("maminha");
-    considerar(maminha);
-    var picanha = document.getElementById("picanha");
-    considerar(picanha);
-    var pernilDeCordeiro = document.getElementById("pernil-de-cordeiro");
-    considerar(pernilDeCordeiro);
-
-    var linguicaDeFrango = document.getElementById("linguica-de-frango");
-    considerar(linguicaDeFrango);
-    var linguicaToscana = document.getElementById("linguica-toscana");
-    considerar(linguicaToscana);
-
-    var coracaoDeFrango = document.getElementById("coracao-de-frango");
-    considerar(coracaoDeFrango);
-    var sobrecoxa = document.getElementById("sobrecoxa");
-    considerar(sobrecoxa);
-
-    var peixeMeca = document.getElementById("peixe-meca");
-    considerar(peixeMeca);
+    var carnes = document.getElementsByClassName("carne");
+    var i;
+    for (i = 0; i < carnes.length; ++i) {
+        if (carnes[i].checked) {
+            tipos_de_carne.push(carnes[i].name);    
+        }
+    }
+    
+    q_tipos_de_carne = tipos_de_carne.length;
 
     var kg_por_tipo = kg_carne / q_tipos_de_carne;
 
@@ -43,16 +25,5 @@ function calcular() {
     var i;
     for (i = 0; i < q_tipos_de_carne; i++) {
         table.innerHTML += '<tr><td>' + tipos_de_carne[i] + '</td><td>' + kg_por_tipo.toFixed(2) + '</td></tr>';
-    }
-
-    var resultado = "Homens : " + q_homens + "<br>" + "Mulheres : " + q_mulheres + "<br>" + "Crianças : " + q_criancas + "<br>";
-    
-    //document.getElementById("resultado").innerHTML = resultado;
-
-    function considerar(x) {
-        if (x.checked) {
-            q_tipos_de_carne += 1;
-            tipos_de_carne.push(x.name);
-        }
     }
 }
